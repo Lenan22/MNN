@@ -9,6 +9,9 @@ string(REGEX MATCH "MNN_VERSION_PATCH [0-9]+" MNN_VERSION_PATCH_DEFINE ${MNN_DEF
 string(REGEX MATCH "[0-9]+" MNN_VERSION_PATCH ${MNN_VERSION_PATCH_DEFINE})
 set(MNN_VERSION ${MNN_VERSION_MAJOR}.${MNN_VERSION_MINOR}.${MNN_VERSION_PATCH})
 
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_STANDARD 17)
+
 # Clear VERSION variables when no VERSION is given to project()
 if(POLICY CMP0048)
   cmake_policy(SET CMP0048 NEW)
@@ -38,7 +41,7 @@ option(MNN_USE_THREAD_POOL "Use MNN's own thread pool implementation" ON)
 option(MNN_BUILD_TRAIN "Build MNN's training framework" OFF)
 option(MNN_BUILD_DEMO "Build demo/exec or not" OFF)
 option(MNN_BUILD_TOOLS "Build tools/cpp or not" ON)
-option(MNN_BUILD_QUANTOOLS "Build Quantized Tools or not" OFF)
+option(MNN_BUILD_QUANTOOLS "Build Quantized Tools or not" ON)
 option(MNN_EVALUATION "Build Evaluation Tools or not" OFF)
 option(MNN_BUILD_CONVERTER "Build Converter" OFF)
 option(MNN_SUPPORT_DEPRECATED_OP "Enable MNN's tflite quantized op" ON)

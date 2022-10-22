@@ -1,0 +1,16 @@
+{
+    "format":"GRAY",
+    "mean":[
+        123.0,
+        123.0,
+        123.0
+    ],
+    "normal":[
+        0.017,
+        0.017,
+        0.017
+    ],
+    "width":32,
+    "height":32,
+    "path":"../resource/lenet_quant_data"
+}

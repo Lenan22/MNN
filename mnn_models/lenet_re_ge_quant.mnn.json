@@ -1,0 +1,125 @@
+[
+    {
+        "name": "data",
+        "outputs": [
+            {
+                "tensorIndex": 0,
+                "scales": [
+                    0.016460547223687173
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Conv_0_out",
+        "inputs": [
+            {
+                "tensorIndex": 0,
+                "scales": [
+                    0.016460547223687173
+                ]
+            }
+        ],
+        "outputs": [
+            {
+                "tensorIndex": 1,
+                "scales": [
+                    0.009519938379526139
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AveragePool_4_out",
+        "inputs": [
+            {
+                "tensorIndex": 1,
+                "scales": [
+                    0.009519938379526139
+                ]
+            }
+        ],
+        "outputs": [
+            {
+                "tensorIndex": 2,
+                "scales": [
+                    0.009414421394467354
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Conv_5_out",
+        "inputs": [
+            {
+                "tensorIndex": 2,
+                "scales": [
+                    0.009414421394467354
+                ]
+            }
+        ],
+        "outputs": [
+            {
+                "tensorIndex": 3,
+                "scales": [
+                    0.004060882609337568
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AveragePool_9_out",
+        "inputs": [
+            {
+                "tensorIndex": 3,
+                "scales": [
+                    0.004060882609337568
+                ]
+            }
+        ],
+        "outputs": [
+            {
+                "tensorIndex": 4,
+                "scales": [
+                    0.0
+                ]
+            }
+        ]
+    },
+    {
+        "name": "onnx::Reshape_35",
+        "outputs": [
+            {
+                "tensorIndex": 5,
+                "scales": [
+                    0.0
+                ]
+            }
+        ]
+    },
+    {
+        "name": "output",
+        "inputs": [
+            {
+                "tensorIndex": 4,
+                "scales": [
+                    0.0
+                ]
+            },
+            {
+                "tensorIndex": 5,
+                "scales": [
+                    0.0
+                ]
+            }
+        ],
+        "outputs": [
+            {
+                "tensorIndex": 6,
+                "scales": [
+                    0.0
+                ]
+            }
+        ]
+    }
+]
