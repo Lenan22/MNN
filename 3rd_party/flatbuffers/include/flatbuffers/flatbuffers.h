@@ -1893,7 +1893,9 @@ template<typename T> T *GetMutableRoot(void *buf) {
   EndianCheck();
   return reinterpret_cast<T *>(
       reinterpret_cast<uint8_t *>(buf) +
-      EndianScalar(*reinterpret_cast<uoffset_t *>(buf)));
+      EndianScalar(*reinterpret_cast<uoffset_t *>(buf)));    
+      // uoffset_t: uint32_t 是一个无符号整数
+      // 相当于指针往后移动 EndianScalar(*reinterpret_cast<uoffset_t *>(buf)) 位.
 }
 
 template<typename T> const T *GetRoot(const void *buf) {

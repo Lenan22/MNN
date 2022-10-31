@@ -29,7 +29,9 @@ int main(int argc, const char* argv[]) {
         std::ifstream input(modelFile, std::ifstream::in | std::ifstream::binary);
         std::ostringstream outputOs;
         outputOs << input.rdbuf();
-        netT = MNN::UnPackNet(outputOs.str().c_str());
+        netT = MNN::UnPackNet(outputOs.str().c_str());    
+        // .str()返回一个string对象,
+        //  c_str()方法是返回一个C语言字符串的指针常量(即可读不可改变)
     }
 
     // temp build net for inference
@@ -53,8 +55,10 @@ int main(int argc, const char* argv[]) {
     DLOG(INFO) << "Calibrate the feature and quantize model...";
     std::shared_ptr<Calibration> calibration(
         new Calibration(netT.get(), modelForInference.get(), size, preTreatConfig, std::string(modelFile), std::string(dstFile)));
+    
     calibration->runQuantizeModel();
     calibration->dumpTensorScales(dstFile);
+    
     DLOG(INFO) << "Quantize model done!";
 
     return 0;

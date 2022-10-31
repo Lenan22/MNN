@@ -1,7 +1,7 @@
 set(MNN_QUAN_TOOLS "")
 
 file(GLOB QUANFILES ${CMAKE_CURRENT_LIST_DIR}/*.cpp ${CMAKE_CURRENT_LIST_DIR}/*.hpp)
-add_executable(quantized.out ${QUANFILES})
+add_executable(quantized.out EXCLUDE_FROM_ALL ${QUANFILES})
 list(APPEND MNN_QUAN_TOOLS quantized.out)
 
 foreach(TARGET ${MNN_QUAN_TOOLS})

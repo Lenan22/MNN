@@ -297,9 +297,9 @@ template<typename T> T EndianSwap(T t) {
   #pragma warning(pop)
 #endif
 
-
+                              // Scalar 标量的
 template<typename T> T EndianScalar(T t) {
-  #if FLATBUFFERS_LITTLEENDIAN
+  #if FLATBUFFERS_LITTLEENDIAN     // flat buffers little endian(字节存储次序)
     return t;
   #else
     return EndianSwap(t);

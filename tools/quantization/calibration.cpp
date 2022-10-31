@@ -40,7 +40,7 @@
 using namespace MNN::CV;
 using namespace MNN::Train;
 using namespace MNN::Express;
-
+                                                                                             // "../mnn_models/lenet_re_ge.json"   // "../mnn_models/lenet_re_ge.mnn"  // "../mnn_models/lenet_re_ge_quant.mnn"                                                                                                   
 Calibration::Calibration(MNN::NetT* model, const uint8_t* modelBuffer, const int bufferSize, const std::string& configPath, std::string originalModelFile, std::string destModelFile)
     : _originalModel(model), _originalModelFile(originalModelFile), _destModelFile(destModelFile) {
     // when the format of input image is RGB/BGR, channels equal to 3, GRAY is 1
